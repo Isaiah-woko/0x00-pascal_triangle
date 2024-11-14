@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const request = require('request');
+import request from 'request';
 
 request('https://swapi-api.hbtn.io/api/films/' + process.argv[2], function (err, res, body) {
   if (err) throw err;
@@ -15,4 +15,3 @@ const exactOrder = (actors, x) => {
     exactOrder(actors, x + 1);
   });
 };
-
